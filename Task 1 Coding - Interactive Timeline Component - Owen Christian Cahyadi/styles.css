@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    padding: 5px 5%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    --tw-shadow: 0px 6px 45px -4px rgba(112, 59, 231, .1);
+    --tw-shadow-colored: 0px 6px 45px -4px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    z-index: 1;
+}
+
+.add {
+    height: 45px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, #7f52ff 0%, #fb8570 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.logo{
+    font-size: 1.1rem;
+    background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    background: linear-gradient(to bottom right, #7f52ff 0%, #fb8570 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#clipsWrapper {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    gap: 20px;
+}
+
+#clipsWrapper::-webkit-scrollbar {
+    width: 0;
+}
+
+#clipsWrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.clip {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    flex-shrink: 0;
+    cursor: move;
+    position: relative;
+}
+
+.resize-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px; 
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: ew-resize;
+}
+
+.resize-handle.left {
+    left: -5px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.resize-handle.right {
+    right: -5px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.add-clip {
+    display: none;  
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+    border-radius: 8px;
+}
+
+.add-clip input,
+.add-clip button {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.add-clip button{
+    color: white;
+    background: linear-gradient(to bottom right, #7f52ff 0%, #fb8570 100%);
+    border: none;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}

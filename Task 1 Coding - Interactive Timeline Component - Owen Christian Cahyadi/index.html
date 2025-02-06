@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coding-Interactive Timeline Component</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <h1>Owen</h1>
+            </div>
+            <button class="add">Buat Video</button>
+        </nav>
+        <h1 class="title">Interactive Timeline Component</h1>
+        <div class="add-clip">
+            <input type="text" id="clipLabel" placeholder="Label">
+            <input type="number" id="clipDuration" placeholder="Duration (sec)">
+            <button onclick="addClip()">Add Clip</button>
+        </div>
+        <div class="modal-overlay" id="modalOverlay"></div>
+
+        <div class="container">
+            <div class="clips-wrapper" id="clipsWrapper"></div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
